@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Recetario digital de cocina con deliciosas recetas saladas y dulces.">
+  <title>Recetario Digital</title>
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+  <!-- Encabezado y Navegación Principal -->
+  <header class="header">
+    <div class="logo">
+      <h1>Recetario de Cocina</h1>
+    </div>
+    <nav aria-label="Navegación principal">
+      <ul class="nav-links">
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#autor">Quiénes somos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+
+    <!-- Sección del Catálogo de Recetas -->
+    <section id="catalogo" class="seccion-catalogo" aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Catálogo de Recetas</h2>
+
+      <!-- Sistema de Filtros (Solo HTML/CSS con Radio Buttons) -->
+      <fieldset class="filtro-categorias">
+        <legend class="sr-only">Selecciona una categoría de recetas</legend>
+        
+        <input type="radio" id="cat-todas" name="categoria" value="todas" checked>
+        <label for="cat-todas">Todas</label>
+
+        <input type="radio" id="cat-salado" name="categoria" value="salado">
+        <label for="cat-salado">Salado</label>
+
+        <input type="radio" id="cat-dulce" name="categoria" value="dulce">
+        <label for="cat-dulce">Dulce</label>
+      </fieldset>
+
+      <!-- Grilla de Recetas -->
+      <div class="grid-recetas">
+
+        <!-- ===== CATEGORÍA: SALADO ===== -->
+        <article class="tarjeta-receta salado">
+          <h3>Pizza Margarita</h3>
+          <div class="imagen-contenedor">
+            <img src="imágenes/receta1.png" alt="Pizza Margarita recién horneada con albahaca fresca y queso fundido">
+          </div>
+          <a href="recetarios/receta1.pdf" class="btn-descarga" download aria-label="Descargar PDF de receta Pizza Margarita">
+            Descargar PDF
+          </a>
+        </article>
+
+        <article class="tarjeta-receta salado">
+          <h3>Empanadas de Carne</h3>
+          <div class="imagen-contenedor">
+            <img src="imágenes/receta2.png" alt="Empanadas doradas de carne cocinadas al horno">
+          </div>
+          <a href="recetarios/receta2.pdf" class="btn-descarga" download aria-label="Descargar PDF de receta Empanadas de Carne">
+            Descargar PDF
+          </a>
+        </article>
+
+        <article class="tarjeta-receta salado">
+          <h3>Sopa de Verduras</h3>
+          <div class="imagen-contenedor">
+            <img src="imágenes/receta3.png" alt="Tazón de sopa casera con verduras variadas picadas">
+          </div>
+          <a href="recetarios/receta3.pdf" class="btn-descarga" download aria-label="Descargar PDF de receta Sopa de Verduras">
+            Descargar PDF
+          </a>
+        </article>
+
+
+        <!-- ===== CATEGORÍA: DULCE ===== -->
+        <article class="tarjeta-receta dulce">
+          <h3>Torta de Chocolate</h3>
+          <div class="imagen-contenedor">
+            <img src="imágenes/receta4.png" alt="Porción de torta húmeda de chocolate con cobertura esponjosa">
+          </div>
+          <a href="recetarios/receta4.pdf" class="btn-descarga" download aria-label="Descargar PDF de receta Torta de Chocolate">
+            Descargar PDF
+          </a>
+        </article>
+
+        <article class="tarjeta-receta dulce">
+          <h3>Flan Casero</h3>
+          <div class="imagen-contenedor">
+            <img src="imágenes/receta5.png" alt="Flan casero tradicional de huevo servido con abundante caramelo">
+          </div>
+          <a href="recetarios/receta5.pdf" class="btn-descarga" download aria-label="Descargar PDF de receta Flan Casero">
+            Descargar PDF
+          </a>
+        </article>
+
+        <article class="tarjeta-receta dulce">
+          <h3>Galletas de Avena</h3>
+          <div class="imagen-contenedor">
+            <img src="imágenes/receta6.png" alt="Plato con galletas crocantes de avena y pasas de uva">
+          </div>
+          <a href="recetarios/receta6.pdf" class="btn-descarga" download aria-label="Descargar PDF de receta Galletas de Avena">
+            Descargar PDF
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Información del Mantenedor -->
+    <section id="autor" class="seccion-info" aria-labelledby="titulo-autor">
+      <h2 id="titulo-autor">Quién Mantiene el Sitio</h2>
+      <p>Este sitio es gestionado y mantenido por <strong>Chef Ana Martínez</strong>, apasionada por la gastronomía moderna y la divulgación de recetas caseras y accesibles para todos.</p>
+    </section>
+
+    <!-- Información de Contacto -->
+    <section id="contacto" class="seccion-info" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Información de Contacto</h2>
+      <p>Si tienes sugerencias o consultas sobre las recetas, puedes comunicarte a través de:</p>
+      <ul>
+        <li>Correo electrónico: <a href="mailto:contacto@recetariodigital.com">contacto@recetariodigital.com</a></li>
+        <li>Teléfono: +54 11 1234-5678</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2026 Recetario Digital. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

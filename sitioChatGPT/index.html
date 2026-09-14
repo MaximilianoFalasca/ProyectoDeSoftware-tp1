@@ -1,0 +1,279 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web de recetas de cocina dulces y saladas.">
+    <title>Recetario</title>
+
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Mi Recetario</h1>
+        <p>Recetas caseras dulces y saladas</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="#recetas">Recetas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#mantenimiento">Quién mantiene el sitio</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="recetas" aria-labelledby="titulo-recetas">
+
+            <h2 id="titulo-recetas">Catálogo de recetas</h2>
+
+            <!--
+                Los radio buttons permiten seleccionar una categoría
+                y CSS se encarga de mostrar las recetas correspondientes.
+            -->
+            <fieldset class="selector-categoria">
+
+                <legend>Elegí una categoría</legend>
+
+                <div class="opciones-categoria">
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="categoria-salado"
+                            name="categoria"
+                            value="salado"
+                            checked
+                        >
+                        <label for="categoria-salado">Salado</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="categoria-dulce"
+                            name="categoria"
+                            value="dulce"
+                        >
+                        <label for="categoria-dulce">Dulce</label>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+            <!-- RECETAS SALADAS -->
+            <section
+                id="salado"
+                class="recetas categoria-salada"
+                aria-labelledby="titulo-salado"
+            >
+                <h3 id="titulo-salado">Recetas saladas</h3>
+
+                <div class="grilla-recetas">
+
+                    <article class="receta">
+                        <img
+                            src="imágenes/receta1.png"
+                            alt="Empanadas caseras de carne"
+                        >
+
+                        <div class="contenido-receta">
+                            <h4>Empanadas de carne</h4>
+
+                            <p>
+                                Clásicas empanadas caseras rellenas de carne,
+                                cebolla y condimentos.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta1.pdf"
+                                download
+                            >
+                                Descargar receta en PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="receta">
+                        <img
+                            src="imágenes/receta2.png"
+                            alt="Pizza casera con queso y tomate"
+                        >
+
+                        <div class="contenido-receta">
+                            <h4>Pizza casera</h4>
+
+                            <p>
+                                Pizza artesanal con salsa de tomate,
+                                mozzarella y orégano.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta2.pdf"
+                                download
+                            >
+                                Descargar receta en PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="receta">
+                        <img
+                            src="imágenes/receta3.png"
+                            alt="Milanesas caseras acompañadas con papas"
+                        >
+
+                        <div class="contenido-receta">
+                            <h4>Milanesas con papas</h4>
+
+                            <p>
+                                Milanesas crocantes acompañadas con
+                                papas doradas al horno.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta3.pdf"
+                                download
+                            >
+                                Descargar receta en PDF
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- RECETAS DULCES -->
+            <section
+                id="dulce"
+                class="recetas categoria-dulce"
+                aria-labelledby="titulo-dulce"
+            >
+                <h3 id="titulo-dulce">Recetas dulces</h3>
+
+                <div class="grilla-recetas">
+
+                    <article class="receta">
+                        <img
+                            src="imágenes/receta4.png"
+                            alt="Torta de chocolate decorada"
+                        >
+
+                        <div class="contenido-receta">
+                            <h4>Torta de chocolate</h4>
+
+                            <p>
+                                Una torta húmeda de chocolate ideal
+                                para compartir.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta4.pdf"
+                                download
+                            >
+                                Descargar receta en PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="receta">
+                        <img
+                            src="imágenes/receta5.png"
+                            alt="Alfajores caseros rellenos con dulce de leche"
+                        >
+
+                        <div class="contenido-receta">
+                            <h4>Alfajores de dulce de leche</h4>
+
+                            <p>
+                                Delicados alfajores caseros rellenos
+                                con dulce de leche.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta5.pdf"
+                                download
+                            >
+                                Descargar receta en PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="receta">
+                        <img
+                            src="imágenes/receta6.png"
+                            alt="Budín de vainilla casero"
+                        >
+
+                        <div class="contenido-receta">
+                            <h4>Budín de vainilla</h4>
+
+                            <p>
+                                Budín suave y esponjoso, perfecto
+                                para acompañar el mate.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta6.pdf"
+                                download
+                            >
+                                Descargar receta en PDF
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </section>
+
+        <section id="contacto" class="informacion">
+            <h2>Información de contacto</h2>
+
+            <address>
+                <p>
+                    Email:
+                    <a href="mailto:contacto@mirecetario.com">
+                        contacto@mirecetario.com
+                    </a>
+                </p>
+
+                <p>
+                    Teléfono:
+                    <a href="tel:+541100000000">
+                        +54 11 0000-0000
+                    </a>
+                </p>
+            </address>
+        </section>
+
+        <section id="mantenimiento" class="informacion">
+            <h2>Quién mantiene el sitio</h2>
+
+            <p>
+                Este sitio es mantenido por el equipo de Mi Recetario,
+                encargado de incorporar nuevas recetas y mantener
+                actualizado el catálogo.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mi Recetario. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
+```
