@@ -29,19 +29,17 @@
     <section id="catalogo" class="seccion-catalogo" aria-labelledby="titulo-catalogo">
       <h2 id="titulo-catalogo">Catálogo de Recetas</h2>
 
-      <!-- Sistema de Filtros (Solo HTML/CSS con Radio Buttons) -->
-      <fieldset class="filtro-categorias">
-        <legend class="sr-only">Selecciona una categoría de recetas</legend>
-        
-        <input type="radio" id="cat-todas" name="categoria" value="todas" checked>
+      <!-- Radio buttons en el mismo nivel jerárquico que la grilla -->
+      <input type="radio" id="cat-todas" name="categoria" value="todas" checked class="radio-filtro">
+      <input type="radio" id="cat-salado" name="categoria" value="salado" class="radio-filtro">
+      <input type="radio" id="cat-dulce" name="categoria" value="dulce" class="radio-filtro">
+
+      <!-- Botones visuales asociados a los radio buttons -->
+      <div class="filtro-categorias" role="radiogroup" aria-label="Filtro por categoría">
         <label for="cat-todas">Todas</label>
-
-        <input type="radio" id="cat-salado" name="categoria" value="salado">
         <label for="cat-salado">Salado</label>
-
-        <input type="radio" id="cat-dulce" name="categoria" value="dulce">
         <label for="cat-dulce">Dulce</label>
-      </fieldset>
+      </div>
 
       <!-- Grilla de Recetas -->
       <div class="grid-recetas">
@@ -76,7 +74,6 @@
             Descargar PDF
           </a>
         </article>
-
 
         <!-- ===== CATEGORÍA: DULCE ===== -->
         <article class="tarjeta-receta dulce">

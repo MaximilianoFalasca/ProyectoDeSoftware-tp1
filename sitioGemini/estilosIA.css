@@ -31,19 +31,6 @@ body {
   min-height: 100vh;
 }
 
-/* Accesibilidad: Ocultar visualmente pero mantener para lectores de pantalla */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 /* ==========================================================================
    2. HEADER Y NAVEGACIÓN
    ========================================================================== */
@@ -99,21 +86,19 @@ body {
   font-size: 2rem;
 }
 
-/* Estilo para la barra/selector de radio buttons */
+/* Ocultar los radio buttons reales pero dejarlos funcionales */
+.radio-filtro {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Contenedor de botones visuales (labels) */
 .filtro-categorias {
-  border: none;
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
-}
-
-/* Ocultamos el input radio por defecto para personalizar las etiquetas */
-.filtro-categorias input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
 }
 
 .filtro-categorias label {
@@ -126,35 +111,34 @@ body {
   transition: var(--transicion);
 }
 
-/* Estilos de estado para los botones del filtro */
 .filtro-categorias label:hover {
   background-color: #d1d5db;
 }
 
-.filtro-categorias input[type="radio"]:checked + label {
+/* Estado seleccionado de los botones */
+#cat-todas:checked ~ .filtro-categorias label[for="cat-todas"],
+#cat-salado:checked ~ .filtro-categorias label[for="cat-salado"],
+#cat-dulce:checked ~ .filtro-categorias label[for="cat-dulce"] {
   background-color: var(--color-principal);
   color: white;
 }
 
-.filtro-categorias input[type="radio"]:focus-visible + label {
+/* Foco accesible al navegar con teclado */
+.radio-filtro:focus-visible ~ .filtro-categorias label {
   outline: 3px solid var(--color-secundario);
 }
 
-/* 
-   LÓGICA DE FILTRADO CON CSS (Selector :checked + ~ )
-   Si "salado" está seleccionado, se ocultan las tarjetas de "dulce".
-   Si "dulce" está seleccionado, se ocultan las tarjetas de "salado".
-*/
+/* LÓGICA DE FILTRADO CON CSS */
 #cat-salado:checked ~ .grid-recetas .dulce {
-  display: none;
+  display: none !important;
 }
 
 #cat-dulce:checked ~ .grid-recetas .salado {
-  display: none;
+  display: none !important;
 }
 
 /* ==========================================================================
-   4. TARJETAS DE RECETAS (RECUDRO CON BORDE Y RELLENO)
+   4. TARJETAS DE RECETAS
    ========================================================================== */
 .grid-recetas {
   display: grid;
@@ -164,9 +148,9 @@ body {
 
 .tarjeta-receta {
   background-color: var(--color-tarjeta);
-  border: 2px solid var(--color-borde); /* Borde específico */
+  border: 2px solid var(--color-borde);
   border-radius: 8px;
-  padding: 1.5rem;                    /* Relleno específico */
+  padding: 1.5rem;
   box-shadow: var(--sombra);
   display: flex;
   flex-direction: column;
@@ -252,7 +236,7 @@ body {
 }
 
 /* ==========================================================================
-   6. RESPONSIVIDAD (MEDIA QUERIES)
+   6. RESPONSIVIDAD
    ========================================================================== */
 @media (max-width: 600px) {
   .header {
